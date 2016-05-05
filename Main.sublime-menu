@@ -1,0 +1,16 @@
+[
+{
+    "id": "tools",
+    "children":
+    [
+        {
+            "id": "NativeScript",
+            "caption": "NativeScript",
+            "children":
+            [
+                { "id": "build_ns", "command": "build_ns", "caption": "Build"}
+            ]
+        }
+    ]
+}
+]
