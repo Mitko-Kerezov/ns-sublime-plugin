@@ -8,7 +8,7 @@
             "caption": "NativeScript",
             "children":
             [
-                { "id": "build_ns", "command": "build_ns", "caption": "Build and Deploy"}
+                { "id": "deploy_ns", "command": "deploy_ns", "caption": "Build and Deploy"}
             ]
         }
     ]
