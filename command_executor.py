@@ -27,10 +27,6 @@ def run_command(command, on_data=None, on_done=None, show_progress=True,
     return thread
 
 
-def show_quick_panel(window, items, on_done):
-    window.show_quick_panel(items, on_done)
-
-
 @lru_cache(maxsize=1)
 def _get_nativescript_path():
     _nativescript_path = []

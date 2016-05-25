@@ -1,4 +1,3 @@
-from .command_executor import show_quick_panel
 from .project import Project
 from .notifier import log_info
 
@@ -20,11 +19,11 @@ def select_project(nativescript_command, on_project_selected):
     if projectsCount == 1:
         on_project_selected(projects[0])
     elif projectsCount > 1:
-        show_quick_panel(nativescript_command.get_window(),
-                         projects,
-                         lambda project_index:
-                         on_project_selected(projects[project_index])
-                         if project_index >= 0 else on_project_selected(None))
+        nativescript_command.get_window().show_quick_panel(
+            projects,
+            lambda project_index:
+            on_project_selected(projects[project_index])
+            if project_index >= 0 else on_project_selected(None))
     else:
         log_info("There are no projects in your currently opened folders")
         on_project_selected(None)

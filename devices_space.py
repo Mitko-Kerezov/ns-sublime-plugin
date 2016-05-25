@@ -1,6 +1,6 @@
 from json import loads
 
-from .command_executor import run_command, show_quick_panel
+from .command_executor import run_command
 from .notifier import log_error, log_info
 
 
@@ -58,8 +58,9 @@ def _show_devices_list_and_select_device(nativescript_command,
             return [display_name, platform, model, vandor]
 
         devicesList = list(map(get_device_info, devices))
-        show_quick_panel(nativescript_command.get_window(),
-                         devicesList,
-                         lambda device_index:
-                         on_device_selected(devices[device_index])
-                         if device_index >= 0 else on_device_selected(None))
+
+        nativescript_command.get_window().show_quick_panel(
+            devicesList,
+            lambda device_index:
+            on_device_selected(devices[device_index])
+            if device_index >= 0 else on_device_selected(None))
