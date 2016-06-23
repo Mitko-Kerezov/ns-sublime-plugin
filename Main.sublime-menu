@@ -8,7 +8,9 @@
             "caption": "NativeScript",
             "children":
             [
-                { "id": "deploy_ns", "command": "deploy_ns", "caption": "Build and Deploy"}
+                { "id": "deploy_ns", "command": "deploy_ns", "caption": "Build and Deploy"},
+                { "id": "live_sync_ns", "command": "live_sync_ns", "caption": "LiveSync"},
+                { "id": "toggle_live_sync_ns", "command": "toggle_live_sync_ns", "caption": "Enable LiveSync on save"}
             ]
         }
     ]

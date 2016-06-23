@@ -1,3 +1,5 @@
 [
-    { "keys": ["ctrl+shift+b"], "command": "deploy_ns" }
+    { "keys": ["ctrl+shift+b"], "command": "deploy_ns" },
+    { "keys": ["ctrl+shift+l"], "command": "live_sync_ns" },
+    { "keys": ["ctrl+shift+alt+l"], "command": "toggle_live_sync_ns" }
 ]

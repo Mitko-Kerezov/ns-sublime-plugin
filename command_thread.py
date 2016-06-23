@@ -51,6 +51,10 @@ class CommandThread(Thread):
     def success(self):
         return not self.is_alive() and self.proc and not self.proc.returncode
 
+    def terminate(self):
+        if self.proc:
+            self.proc.terminate()
+
     def _on_finished(self, succeeded):
         if self.on_done:
             main_thread(self.on_done, succeeded)
