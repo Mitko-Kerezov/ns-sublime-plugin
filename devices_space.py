@@ -2,6 +2,7 @@ from json import loads
 
 from .command_executor import run_command
 from .notifier import log_error, log_info
+from .helpers import get_device_info
 
 
 def select_device(nativescript_command, on_device_selected):
@@ -48,18 +49,6 @@ def _show_devices_list_and_select_device(nativescript_command,
     elif devicesCount == 1:
         on_device_selected(devices[0])
     elif devicesCount > 1:
-        def get_device_info(device):
-            def get_value(prop):
-                return device[prop] if device.get(prop) else ""
-
-            display_name = get_value("displayName") or get_value("identifier")
-            platform = "Platform: {platform} {version}".format(
-                    platform=get_value("platform"),
-                    version=get_value("version"))
-            model = "Model: {model}".format(model=get_value("model"))
-            vandor = "Vendor: {vendor}".format(vendor=device.get("vendor"))
-            return [display_name, platform, model, vandor]
-
         devices_list = list(map(get_device_info, devices))
 
         nativescript_command.get_window().show_quick_panel(
