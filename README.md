@@ -50,4 +50,10 @@ The app refreshes automatically.
 
 [Back to Top][1]
 
+Running unit tests
+===
+Unit tests for this package are located in `tests` directory. In order to run the tests the [UnitTesting](https://github.com/randy3k/UnitTesting) sublime package has to be installed. After installing it, start the package through Sublime Text's Comand palette and enter **nativescript-plugin**.
+
+[Back to Top][1]
+
 [1]: #nativescript-for-sublime-text
