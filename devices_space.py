@@ -60,10 +60,10 @@ def _show_devices_list_and_select_device(nativescript_command,
             vandor = "Vendor: {vendor}".format(vendor=device.get("vendor"))
             return [display_name, platform, model, vandor]
 
-        devicesList = list(map(get_device_info, devices))
+        devices_list = list(map(get_device_info, devices))
 
         nativescript_command.get_window().show_quick_panel(
-            devicesList,
+            devices_list,
             lambda device_index:
             on_device_selected(devices[device_index])
             if device_index >= 0 else on_device_selected(None))
