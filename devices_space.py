@@ -5,6 +5,9 @@ from .notifier import log_error, log_info
 
 
 def select_device(nativescript_command, on_device_selected):
+    """
+    Choses device for performing an operation. If multiple devices present prompts user fo a choice.
+    """
     devices = []
 
     def add_device_if_not_empty(device):

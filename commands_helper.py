@@ -3,6 +3,9 @@ from .devices_space import select_device
 
 
 def select_project_and_device(nativescript_command, callback):
+    """
+    Selects project and device for performing operations.
+    """
     select_project(nativescript_command,
                    lambda selected_project:
                    select_device(nativescript_command,

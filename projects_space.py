@@ -3,6 +3,9 @@ from .notifier import log_info
 
 
 def select_project(nativescript_command, on_project_selected):
+    """
+    Locates project based on package.json location. If multiple valid projects present prompts user fo a choice.
+    """
     projects = set()
     working_dir = nativescript_command.get_working_dir()
     project_dir = Project.get_project_dir(working_dir)

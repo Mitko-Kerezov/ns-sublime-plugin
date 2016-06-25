@@ -22,6 +22,9 @@ class ToggleLiveSyncNsCommand(NativeScriptCommand):
         select_project_and_device(self, self.execute)
 
     def execute(self, project_path, device):
+        """
+        Toggles LiveSync on save option for NativeScript project.
+        """
         if not self._is_checked:
             if project_path is None or device is None:
                 self.on_finished(False)

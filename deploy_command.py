@@ -11,6 +11,9 @@ class DeployNsCommand(NativeScriptCommand):
         select_project_and_device(self, self.execute)
 
     def execute(self, project_path, device):
+        """
+        Deploys NativeScript project on device.
+        """
         if project_path is None or device is None:
             self.on_finished(False)
             return None
